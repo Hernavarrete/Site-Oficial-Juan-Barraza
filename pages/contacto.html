@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../media/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,900;1,200;1,400&family=Raleway:ital,wght@0,200;0,400;0,900;1,200;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/style_main.css">
+    <title>Contacto | Juan Barraza</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo"> <a href="../index.html"> <img src="../media/barraza_logo.png" alt="Logo"></a></div>
+            <div class="nav__menu">
+                <ul>
+                    <li> <a href="../index.html"> Home</a></li>
+                    <li> <a href="../pages/fechas.html"> Fechas</a></li>
+                    <li> <a href="../pages/discografia.html"> Discografia</a></li>
+                    <li> <a href="../pages/galeria.html"> Galeria</a></li>
+                    <li> <a href="../pages/contacto.html"> Contacto</a></li>
+                </ul>
+            </div>
+            <div class="nav__icons">
+                <ul>
+                    <li> <a href="https://open.spotify.com/artist/7KLJvXjLa902IgXPVUkMjB?si=vxp_kdlsRHyNvuGzV8Lnhg">
+                            <img src="../media/sp_logo.png" alt="Spotify Juan Barraza"></a></li>
+                    <li> <a href="https://www.instagram.com/acajuanbarraza/?hl=es-la"> <img src="../media/ig_logo.png"
+                                alt="Instagram Juan Barraza"></a></li>
+                    <li> <a href="https://www.youtube.com/c/JuanBarrazaStandUp/featured"> <img
+                                src="../media/yt_logo.png" alt="YouTube Juan Barraza"></a></li>
+                    <li> <a href="https://www.facebook.com/profile.php?id=100050193712131"> <img
+                                src="../media/fb_logo.png" alt="Facebook Juan Barraza"></a></li>
+                    <li> <a href="https://twitter.com/_JuanBarraza?s=20&t=Qgcwnih9BLvkNbHjGVHH_w"> <img
+                                src="../media/tw_logo.png" alt="Twitter Juan Barraza"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h1 id="top" class="titulo">CONTACTO</h1>
+
+    <h2>Para contrataciones completa el siguiente formulario:</h2>
+
+    <form action="">
+        <fieldset class="formulario">
+            <legend>Contrataciones</legend>
+            <!-- Carga manual -->
+            <ul>
+                <li>
+                    <label for="nombre"> Nombre</label>
+                    <input class="input" type="text" name="nombre" id="" placeholder="Nombre Completo" required>
+                </li>
+                <li>
+                    <label for="mail"> Correo Electronico</label>
+
+                    <input class="input" type="email" name="mail" id="" placeholder="admin@admin.com" required>
+                </li>
+                <li>
+                    <label for="fecha"> Fecha del Show</label>
+                    <input class="input" type="date" name="fecha" id="" required>
+                </li>
+                <!-- Seleccion -->
+                <li>
+                    <label for="pais"> Provincia</label>
+                </li>
+                <li>
+                    <select name="provincia" id="" required>
+                        <option class="input" value=""> - Selecciones una Provincia - </option>
+                        <!--Al no devolver un valor, obliga al usuario a elegir una de las opciones dispobibles.-->
+                        <option value="baires"> Buenos Aires</option>
+                        <option value="caba"> CABA</option>
+                        <option value="cordoba"> Cordoba</option>
+                        <option value="mendoza"> Mendoza</option>
+                        <option value="neuquen"> Neuquen</option>
+                        <option value="santafe"> Santa Fe</option>
+                    </select>
+                </li>
+                <!-- Opciones -->
+                <li>
+                    <label for="tipo"> ¿Es un contrato Particular o Empresarial?</label>
+                    <input class="input" type="radio" name="tipo" id="" required> Particular
+                    <!--Para inputs tipo CheckBox o Radio, si queremos que sea required, solo debe colocarse en la primer opcion-->
+                    <input type="radio" name="tipo" id=""> Empresarial
+                </li>
+                <!-- Texto Libre -->
+                <li>
+                    Comentarios adicionales (max 500):
+                </li>
+                <li>
+                    <textarea class="input" name="" id="" cols="30" rows="10" maxlength="500"></textarea>
+                </li>
+                <li>
+                    <input class="submit" type="submit">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <footer class="footer">
+        <ul>
+            <li>Made by Hernán Navarrete</li>
+            <li>©2022</li>
+            <li><a href="#top"> Top</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
