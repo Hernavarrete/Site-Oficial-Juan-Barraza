@@ -6,7 +6,6 @@
 /* TODO EL SITIO */
 
 body {
-    /* background-color: #191009; */
     background-color: #030201;
     color: #efdfd0;
     font-family: 'Raleway', sans-serif;
@@ -22,6 +21,9 @@ body::-webkit-scrollbar {
     text-transform: uppercase;
     text-align: center;
     font-size: 5vw;
+}    
+
+.no_grid {
     padding-top: 12vh;
 }
 
@@ -49,6 +51,7 @@ body::-webkit-scrollbar {
     margin-left: 1vw;
     height: 10vh;
     width: 8vw;
+    object-fit: scale-down;
 }
 
 .nav__menu li {
@@ -89,8 +92,6 @@ body::-webkit-scrollbar {
     text-align: center;
     margin-top: 10px;
     text-transform: uppercase;
-
-    /* display: inline-block; */
 }
 
 .footer a {
@@ -100,12 +101,37 @@ body::-webkit-scrollbar {
 
 /* PAGINA HOME */
 
+#grid {
+    padding-top: 12vh;
+    display: grid;
+    grid-template-areas:
+        "banner banner banner fechas"
+        "youtube youtube bio fechas"
+        "twitter news bio fechas"
+        "footer footer footer footer"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1fr 1fr 1fr 12vh);
+}
+
 .banner {
+    grid-area: banner;
+}
+
+.banner img {
     width: 100%;
+}
+
+.youtube {
+    grid-area: youtube;
 }
 
 .youtube iframe {
     width: 100%;
+}
+
+#bio {
+    grid-area: bio;
 }
 
 .texto {
@@ -118,48 +144,50 @@ body::-webkit-scrollbar {
     text-align: justify;
 }
 
-.info {
+/* .info {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
+} */
 
-.info__fechas {
+#fechas {
+    grid-area: fechas;
     display: flex;
-    width: 33%;
     flex-direction: column;
+    border-left: dotted 5px whitesmoke;
 }
 
-.info__fechas a {
+#fechas a {
     text-decoration: none;
     color: #efdfd0;
     text-transform: uppercase;
     font-size: 1.5vw;
+    
     font-weight: bold;
     text-align: center;
 }
 
-.info__news {
-    width: 33%;
+#news {
+    grid-area: news;
     margin: 1rem 1rem 1rem 1rem;
     border-left: solid #efdfd0;
     border-right: solid #efdfd0;
 }
 
-.info__news p {
+#news p {
     margin-bottom: 2rem;
 }
 
-.info__fechas {
-    border: dotted 1rem whitesmoke;
-}
-
-.info__twitter {
-    width: 33%;
+#twitter {
+    grid-area: twitter;
 }
 
 .twitter-timeline {
     height: fit-content;
+}
+
+footer {
+    grid-area: footer;
 }
 
 /* PAGINA CONTACTO */
@@ -221,4 +249,26 @@ select option {
     list-style: none;
     width: 70%;
 
+}
+
+/* PAGINA GALERIA - Aplicacion de GRID*/
+
+.galeria {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.galeria li {
+    list-style: none;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
