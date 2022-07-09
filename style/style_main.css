@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
     text-transform: uppercase;
     text-align: center;
     font-size: 5vw;
-}    
+}
 
 .no_grid {
     padding-top: 12vh;
@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
 }
 
 .nav__menu li {
-    padding: 1rem;
+    padding: 1vw;
     display: inline-block;
     font-size: 2vw;
     font-family: 'Raleway', sans-serif;
@@ -101,19 +101,6 @@ body::-webkit-scrollbar {
 
 /* PAGINA HOME */
 
-#grid {
-    padding-top: 12vh;
-    display: grid;
-    grid-template-areas:
-        "banner banner banner fechas"
-        "youtube youtube bio fechas"
-        "twitter news bio fechas"
-        "footer footer footer footer"
-    ;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1fr 1fr 1fr 12vh);
-}
-
 .banner {
     grid-area: banner;
 }
@@ -144,26 +131,22 @@ body::-webkit-scrollbar {
     text-align: justify;
 }
 
-/* .info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-} */
-
 #fechas {
     grid-area: fechas;
     display: flex;
     flex-direction: column;
-    border-left: dotted 5px whitesmoke;
 }
 
 #fechas a {
     text-decoration: none;
     color: #efdfd0;
     text-transform: uppercase;
-    font-size: 1.5vw;
-    
+    font-size: 2rem;
     font-weight: bold;
+}
+
+#fechas ul li {
+    list-style: none;
     text-align: center;
 }
 
@@ -256,11 +239,6 @@ select option {
 .galeria {
     margin-left: 20px;
     margin-right: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
 }
 
 .galeria li {
@@ -271,4 +249,74 @@ select option {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* Vista TABLET */
+
+@media screen and (min-width: 768px) {
+
+    /* INDEX */
+
+    #grid__home {
+        padding-top: 12vh;
+        display: grid;
+        grid-template-areas:
+            "banner banner banner fechas"
+            "youtube youtube youtube fechas"
+            "bio bio bio fechas"
+            "twitter news news fechas"
+            "footer footer footer footer"
+        ;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: (1fr 1fr 1fr 1fr 12vh);
+    }
+
+    #fechas {
+        border-left: dotted 5px whitesmoke;
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+
+}
+
+/* Vista DESKTOP */
+
+@media screen and (min-width: 1200px) {
+
+    /* INDEX */
+
+    #grid__home {
+        padding-top: 12vh;
+        display: grid;
+        grid-template-areas:
+            "banner banner banner fechas"
+            "youtube youtube bio fechas"
+            "twitter news bio fechas"
+            "footer footer footer footer"
+        ;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1fr 1fr 1fr 12vh);
+    }
+
+    #fechas {
+        border-left: dotted 5px whitesmoke;
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
 }
