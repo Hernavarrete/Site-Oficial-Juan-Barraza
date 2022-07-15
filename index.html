@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,900;1,200;1,400&family=Raleway:ital,wght@0,200;0,400;0,900;1,200;1,400&display=swap"
         rel="stylesheet">
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/animate.css">
     <!-- Style -->
     <link rel="stylesheet" href="./style/style_main.css">
     <title>Juan Barraza Official Website</title>
@@ -65,7 +68,7 @@
         </div>
 
         <div id="bio">
-            <h2 class="subtitulo">Biografia</h2>
+            <h2 class="subtitulo wow animate__animated animate__jackInTheBox">Biografia</h2>
             <div class="texto">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis quia exercitationem numquam quod
                     placeat
@@ -144,7 +147,7 @@
                     <li>
                         <h2 class="subtitulo">Proximas Fecha</h2>
                     </li>
-                    <li><img src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
+                    <li><img class="image__show"  src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
                     <li><a
                             href="https://www.eventbrite.com.ar/e/garabato-controlado-de-juan-barraza-tickets-325094104217">
                             Entradas Aqui</a></li>
@@ -155,7 +158,7 @@
                     <li>
                         <h2 class="subtitulo">Proximas Fecha</h2>
                     </li>
-                    <li><img src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
+                    <li><img class="image__show" src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
                     <li><a
                             href="https://www.eventbrite.com.ar/e/garabato-controlado-de-juan-barraza-tickets-325094104217">
                             Entradas Aqui</a></li>
@@ -166,7 +169,7 @@
                     <li>
                         <h2 class="subtitulo">Proximas Fecha</h2>
                     </li>
-                    <li><img src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
+                    <li><img class="image__show"  src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
                     <li><a
                             href="https://www.eventbrite.com.ar/e/garabato-controlado-de-juan-barraza-tickets-325094104217">
                             Entradas Aqui</a></li>
@@ -176,7 +179,7 @@
 
         <div id="news">
             <!--Noticias-->
-            <h2 class="subtitulo">Noticias</h2>
+            <h2 class="subtitulo wow animate__animated animate__jackInTheBox">Noticias</h2>
             <div class="texto">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quae blanditiis voluptate nostrum
                     odio
@@ -221,6 +224,10 @@
             </ul>
         </footer>
     </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
 </body>
 
 </html>

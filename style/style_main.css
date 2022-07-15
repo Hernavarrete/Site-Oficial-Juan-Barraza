@@ -36,6 +36,7 @@ body::-webkit-scrollbar {
 .nav {
     background-color: #191009;
     background-image: url(https://www.ubuy.com.ar/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFtWXV4Yk5LVkwuX0FDX1NMMTI0MF8uanBn.jpg);
+    background-image: -moz-linear-gradient(to right, transparent);
     background-blend-mode: overlay;
     position: fixed;
     height: 12vh;
@@ -54,6 +55,24 @@ body::-webkit-scrollbar {
     object-fit: scale-down;
 }
 
+.nav__logo img:hover {
+    animation: shadow-pop-tl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@keyframes shadow-pop-tl {
+    0% {
+        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        transform: translateX(0) translateY(0);
+    }
+
+    100% {
+        box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e, -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e, -8px -8px #3e3e3e;
+        transform: translateX(8px) translateY(8px);
+    }
+}
+
+/* Animacion aplicada tomada de: https://animista.net/play/basic/shadow-pop/shadow-pop-tl */
+
 .nav__menu li {
     padding: 1vw;
     display: inline-block;
@@ -61,6 +80,10 @@ body::-webkit-scrollbar {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.nav__menu li:hover {
+    transform: scale(1.15, 1.15);
 }
 
 .nav__menu a {
@@ -82,6 +105,10 @@ body::-webkit-scrollbar {
     width: 2vw;
 }
 
+.nav__icons li:hover {
+    transform: scale(1.5, 1.5);
+}
+
 .footer {
     border-top: solid #efdfd0;
     margin-top: 1rem;
@@ -100,6 +127,10 @@ body::-webkit-scrollbar {
 }
 
 /* PAGINA HOME */
+
+.image__show{
+    width: 340px;
+}
 
 .banner {
     grid-area: banner;
