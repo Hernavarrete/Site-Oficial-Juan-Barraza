@@ -20,11 +20,8 @@ body::-webkit-scrollbar {
 .titulo {
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
     font-size: 5vw;
-}
-
-.no_grid {
-    padding-top: 12vh;
 }
 
 .subtitulo {
@@ -57,6 +54,11 @@ body::-webkit-scrollbar {
 
 .nav__logo img:hover {
     animation: shadow-pop-tl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.nav__colors {
+    background-color: #191009 !important;
+
 }
 
 @keyframes shadow-pop-tl {
@@ -128,9 +130,14 @@ body::-webkit-scrollbar {
 
 /* PAGINA HOME */
 
-.image__show{
-    width: 340px;
+.carousel-inner a {
+    text-decoration: none;
+    color: #efdfd0;
+    text-transform: uppercase;
+    font-weight: bold;
 }
+
+/* CONTENIDO DESCARTADO AL APLICAR BOOTSTRAP
 
 .banner {
     grid-area: banner;
@@ -138,6 +145,41 @@ body::-webkit-scrollbar {
 
 .banner img {
     width: 100%;
+}
+
+.image__show{
+    width: 340px;
+}
+
+#fechas {
+    grid-area: fechas;
+    display: flex;
+    flex-direction: column;
+}
+
+#fechas a {
+    text-decoration: none;
+    color: #efdfd0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#fechas ul li {
+    list-style: none;
+    text-align: center;
+} */
+
+.carousel .carousel-item {
+    height: 45vh;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 45vh;
 }
 
 .youtube {
@@ -160,25 +202,6 @@ body::-webkit-scrollbar {
 .texto p {
     text-indent: 15px;
     text-align: justify;
-}
-
-#fechas {
-    grid-area: fechas;
-    display: flex;
-    flex-direction: column;
-}
-
-#fechas a {
-    text-decoration: none;
-    color: #efdfd0;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-#fechas ul li {
-    list-style: none;
-    text-align: center;
 }
 
 #news {
@@ -206,11 +229,14 @@ footer {
 
 /* PAGINA CONTACTO */
 
+/*  CONTENIDO DESCARTADO AL APLICAR BOOTSTRAP
+
 .input {
     background-color: transparent;
     color: #efdfd0;
     font-size: 1.5rem;
 }
+
 
 .formulario legend {
     text-align: center;
@@ -227,7 +253,7 @@ footer {
 
 .formulario li {
     margin: 10px;
-    font-size: 2rem;
+
 }
 
 .formulario select {
@@ -239,7 +265,7 @@ footer {
 select option {
     background-color: #030201;
     font-size: 1.5rem;
-}
+} */
 
 .submit {
     height: 5vh;
@@ -289,16 +315,14 @@ select option {
     /* INDEX */
 
     #grid__home {
-        padding-top: 12vh;
         display: grid;
         grid-template-areas:
-            "banner banner banner fechas"
-            "youtube youtube youtube fechas"
-            "bio bio bio fechas"
-            "twitter news news fechas"
-            "footer footer footer footer"
+            "youtube youtube youtube"
+            "bio bio bio"
+            "twitter news news"
+            "footer footer footer"
         ;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: (1fr 1fr 1fr 1fr 12vh);
     }
 
@@ -325,15 +349,13 @@ select option {
     /* INDEX */
 
     #grid__home {
-        padding-top: 12vh;
         display: grid;
         grid-template-areas:
-            "banner banner banner fechas"
-            "youtube youtube bio fechas"
-            "twitter news bio fechas"
-            "footer footer footer footer"
+            "youtube youtube bio"
+            "twitter news bio"
+            "footer footer footer"
         ;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1fr 1fr 1fr 12vh);
     }
 

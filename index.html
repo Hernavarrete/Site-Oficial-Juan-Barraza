@@ -15,6 +15,10 @@
     <!-- Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/animate.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9272461c48.js" crossorigin="anonymous"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./style/style_main.css">
     <title>Juan Barraza Official Website</title>
@@ -23,7 +27,9 @@
 <body>
 
     <header class="header">
-        <nav class="nav">
+
+        <!-- NAVBAR ORIGINAL USANDO FLEX EN CSS -->
+        <!-- <nav class="nav">
             <div class="nav__logo"> <a href="index.html"> <img src="./media/barraza_logo.png" alt="Logo"></a></div>
             <div class="nav__menu">
                 <ul>
@@ -48,17 +54,127 @@
                                 src="./media/tw_logo.png" alt="Twitter Juan Barraza"></a></li>
                 </ul>
             </div>
+        </nav> -->
+
+        <!-- NAVBAR UTILIZANDO BOOTSTRAP -->
+        <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #030201;">
+            <div class="container-fluid">
+                <a class="navbar-brand pt-0" href="index.html"> <img src="./media/barraza_logo.png" alt="Logo"
+                        width="90" height="72"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav__menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/fechas.html">Fechas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/discografia.html">Discografia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contactos</a>
+                        </li>
+                    </ul>
+                    <ul class=" nav__icons ps-0">
+                        <li> <a href="https://open.spotify.com/artist/7KLJvXjLa902IgXPVUkMjB?si=vxp_kdlsRHyNvuGzV8Lnhg">
+                                <img src="./media/sp_logo.png" alt="Spotify Juan Barraza"></a></li>
+                        <li> <a href="https://www.instagram.com/acajuanbarraza/?hl=es-la"> <img
+                                    src="./media/ig_logo.png" alt="Instagram Juan Barraza"></a></li>
+                        <li> <a href="https://www.youtube.com/c/JuanBarrazaStandUp/featured"> <img
+                                    src="./media/yt_logo.png" alt="YouTube Juan Barraza"></a></li>
+                        <li> <a href="https://www.facebook.com/profile.php?id=100050193712131"> <img
+                                    src="./media/fb_logo.png" alt="Facebook Juan Barraza"></a></li>
+                        <li> <a href="https://twitter.com/_JuanBarraza?s=20&t=Qgcwnih9BLvkNbHjGVHH_w"> <img
+                                    src="./media/tw_logo.png" alt="Twitter Juan Barraza"></a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
     </header>
+
+    <h1 id="top" class="titulo">¡Este es mi sitio oficial, Carajitos!</h1>
+
+    <div id="carouselExampleCaptions" class="carousel slide pause" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <img src="./media/banner_barraza1.jpg" class="img-fluid h-100 start-50 translate-middle-x"
+                    alt="Barraza">
+
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./media/banner_07_30.png" class="img-fluid h-100 start-50 translate-middle-x"
+                    alt="Barraza Quality">
+                <div class="carousel-caption d-none d-md-block position-absolute bottom-0 end-0">
+                    <button type="button" class="btn btn-dark btn-lg"><a
+                            href="https://www.ticketek.com.ar/juan-barraza/quality-teatro">Entradas</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./media/banner_08_11.png" class="img-fluid h-100 start-50 translate-middle-x"
+                    alt="Barraza Chile">
+                <div class="carousel-caption d-none d-md-block position-absolute bottom-0 end-0">
+                    <button type="button" class="btn btn-dark btn-lg"><a
+                            href="https://www.passline.com/eventos/juan-barraza-en-chile-11-agosto-2000-hrs">Entradas</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./media/banner_08_26.png" class="img-fluid h-100 start-50 translate-middle-x"
+                    alt="Barraza Bahia Blanca">
+                <div class="carousel-caption d-none d-md-block position-absolute bottom-0 end-0">
+                    <button type="button" class="btn btn-dark btn-lg"><a
+                            href="https://entradauno.com/11853-garabato-controlado/11853?h=8d1213cee1f699f898ed2d555cac3a382b1436c3">Entradas</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./media/banner_08_27.png" class="img-fluid h-100 start-50 translate-middle-x"
+                    alt="Barraza Neuquen">
+                <div class="carousel-caption d-none d-md-block position-absolute bottom-0 end-0">
+                    <button type="button" class="btn btn-dark btn-lg"><a
+                            href="https://www.boleteria.com.ar/p/fg-producciones/evento/garabato-controlado-en-neuquen-e750">Entradas</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./media/banner_08_28.png" class="img-fluid h-100 start-50 translate-middle-x"
+                    alt="Barraza Bariloche">
+                <div class="carousel-caption d-none d-md-block position-absolute bottom-0 end-0">
+                    <button type="button" class="btn btn-dark btn-lg"><a
+                            href="https://www.boleteria.com.ar/p/fg-producciones/evento/garabato-controlado-en-bariloche-e751">Entradas</a></button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <i class="fa-solid fa-angles-left"><span aria-hidden="true"></span></i>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <i class="fa-solid fa-angles-right"><span aria-hidden="true"></span></i>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
 
     <div id="grid__home">
-        <div class="banner">
+        <!-- <div class="banner">
             <h1 id="top" class="titulo">¡Este es mi sitio oficial, Carajitos!</h1>
-            <img src="./media/banner_barraza1.jpg" alt="Juan Barraza">
-        </div>
+            <img class="img-fluid" src="./media/banner_barraza1.jpg" alt="Juan Barraza">
+        </div> -->
 
-        <div class="youtube">
+        <div class="youtube ratio ratio-16x9">
             <!--Video YouTube-->
             <iframe width="1120" height="630"
                 src="https://www.youtube.com/embed/rHzh2MygMwo?controls=1&autoplay=1&mute=1"
@@ -140,14 +256,16 @@
         </div>
 
         <!-- <section class="info"> -->
-        <section id="fechas">
-            <!--Fechas Destacadas-->
+
+        <!-- CONTENIDO DESCARTADO AL APLICAR BOOTSTRAP
+
+            <section id="fechas">
             <div>
                 <ul>
                     <li>
                         <h2 class="subtitulo">Proximas Fecha</h2>
                     </li>
-                    <li><img class="image__show"  src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
+                    <li><img class="image__show" src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
                     <li><a
                             href="https://www.eventbrite.com.ar/e/garabato-controlado-de-juan-barraza-tickets-325094104217">
                             Entradas Aqui</a></li>
@@ -169,13 +287,13 @@
                     <li>
                         <h2 class="subtitulo">Proximas Fecha</h2>
                     </li>
-                    <li><img class="image__show"  src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
+                    <li><img class="image__show" src="./media/show_barraza.jpg" alt="Mendoza_2022"></li>
                     <li><a
                             href="https://www.eventbrite.com.ar/e/garabato-controlado-de-juan-barraza-tickets-325094104217">
                             Entradas Aqui</a></li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
         <div id="news">
             <!--Noticias-->
@@ -226,8 +344,11 @@
     </div>
     <script src="js/wow.min.js"></script>
     <script>
-    new WOW().init();
+        new WOW().init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
