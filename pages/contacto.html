@@ -67,54 +67,55 @@
 
     <h2 class="ms-4 text-uppercase">Para contrataciones completa el siguiente formulario:</h2>
 
-    <div class="container-fluid">
+    <form class="container-fluid needs-validation">
 
         <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="name" id="Name" maxlength="1000"
-                style="background-color: #030201; color: #efdfd0;" required></textarea>
-            <label for="Name">Nombre Completo</label>
+            <input class="form-control" placeholder="name" id="name" style="background-color: #030201; color: #efdfd0;"
+                required></input>
+            <label for="name">Nombre Completo</label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                style="background-color: #030201; color: #efdfd0;">
-            <label for="floatingInput">Correo Electronico</label>
+            <input type="email" class="form-control" id="mail" placeholder="mail"
+                style="background-color: #030201; color: #efdfd0;" required>
+            <label for="mail">Correo Electronico</label>
         </div>
 
-        <div class="mb-3">
-            <label for="fecha"> Fecha del Show</label>
+        <div class="form-floating mb-3">
             <input type="date" class="form-control" name="fecha" id="fecha"
                 style="background-color: #030201; color: #efdfd0;" required>
+            <label for="fecha"> Fecha del Show</label>
         </div>
 
-        <select class="form-select mb-3" aria-label="Default select example"
-            style="background-color: #030201; color: #efdfd0;">
-            <option selected>Seleccione una Provincia</option>
-            <option value="1">Buenos Aires</option>
-            <option value="2">CABA</option>
-            <option value="3">Cordoba</option>
-            <option value="4">Mendoza</option>
-            <option value="5">Neuquen</option>
-            <option value="6">Santa Fe</option>
-        </select>
+        <div class="form-floating">
+            <select class="form-select mb-3" id="ciudad" aria-label="Default select example"
+                style="background-color: #030201; color: #efdfd0;" required>
+                <option selected disabled value="">Seleccione una Provincia</option>
+                <option value="1">Buenos Aires</option>
+                <option value="2">CABA</option>
+                <option value="3">Cordoba</option>
+                <option value="4">Mendoza</option>
+                <option value="5">Neuquen</option>
+                <option value="6">Santa Fe</option>
+            </select>
+            <label for="ciudad">Lugar del show :</label>
+        </div>
 
         <div class="mb-3">
             <label for="tipo"> ¿Es un contrato Particular o Empresarial?</label>
-            <input class="input" type="radio" name="tipo" id="" required> Particular
+            <input class="form-check-input" type="radio" name="tipo" id="" required> Particular
             <!--Para inputs tipo CheckBox o Radio, si queremos que sea required, solo debe colocarse en la primer opcion-->
-            <input type="radio" name="tipo" id=""> Empresarial
+            <input class="form-check-input " type="radio" name="tipo" id=""> Empresarial
         </div>
 
         <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" maxlength="1000"
+            <textarea class="form-control" placeholder="Mensaje" id="Mensaje" maxlength="1000"
                 style="background-color: #030201; color: #efdfd0; height: 25vh"></textarea>
-            <label for="floatingTextarea">Comentarios adicionales (max 1000):</label>
+            <label for="Mensaje">Comentarios adicionales (max 1000):</label>
         </div>
 
-        <div class="mb-2">
-            <input class="submit" type="submit">
-        </div>
-    </div>
+        <input type="submit" class="btn btn-outline-light btn-lg mb-3 text-uppercase w-100"></input>
+    </form>
 
     <footer class="footer">
         <ul>
@@ -126,6 +127,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+    <script>
+        export default {
+            data() {
+                return {
+                    value: ''
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 * {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+}
 
 /* TODO EL SITIO */
 body {
@@ -8,20 +9,25 @@ body {
   color: #efdfd0;
   font-family: 'Raleway', sans-serif;
   -ms-overflow-style: none;
-  scrollbar-width: none; }
-  body::-webkit-scrollbar {
-    display: none; }
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .titulo {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
-  font-size: 5vw; }
+  font-size: 5vw;
+}
 
 .subtitulo {
   text-transform: uppercase;
   font-size: 2.5rem;
-  text-align: center; }
+  text-align: center;
+}
 
 .nav__menu li {
   color: #efdfd0;
@@ -31,156 +37,215 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  position: relative; }
-  .nav__menu li:hover {
-    transform: scale(1.15, 1.15); }
-  .nav__menu li a {
-    text-decoration: none;
-    color: #efdfd0; }
+  position: relative;
+}
+
+.nav__menu li:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.nav__menu li a {
+  text-decoration: none;
+  color: #efdfd0;
+}
 
 @keyframes shadow-pop-tl {
   0% {
     box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-    transform: translateX(0) translateY(0); }
+    transform: translateX(0) translateY(0);
+  }
+
   100% {
     box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e, -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e, -8px -8px #3e3e3e;
-    transform: translateX(8px) translateY(8px); } }
+    transform: translateX(8px) translateY(8px);
+  }
+}
 
 /* Animacion aplicada tomada de: https://animista.net/play/basic/shadow-pop/shadow-pop-tl */
 .nav__icons li {
   padding: 0.5vw;
-  display: inline-block; }
-  .nav__icons li img {
-    height: 2vw;
-    width: 2vw; }
-  .nav__icons li:hover {
-    transform: scale(1.5, 1.5); }
+  display: inline-block;
+}
+
+.nav__icons li img {
+  height: 2vw;
+  width: 2vw;
+}
+
+.nav__icons li:hover {
+  transform: scale(1.5, 1.5);
+}
 
 .footer {
   border-top: solid #efdfd0;
-  margin-top: 1rem; }
-  .footer ul li {
-    list-style: none;
-    text-align: center;
-    margin-top: 10px;
-    text-transform: uppercase; }
-    .footer ul li a {
-      text-decoration: none;
-      color: #efdfd0; }
+  margin-top: 1rem;
+}
+
+.footer ul li {
+  list-style: none;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #efdfd0;
+}
 
 /* PAGINA HOME */
 .carousel-inner a {
   text-decoration: none;
   color: #efdfd0;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .carousel .carousel-item {
-  height: 334px; }
-  .carousel .carousel-item img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    width: 576px; }
+  height: 334px;
+}
+
+.carousel .carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 576px;
+}
 
 .youtube {
-  grid-area: youtube; }
-  .youtube iframe {
-    width: 100%; }
+  grid-area: youtube;
+}
+
+.youtube iframe {
+  width: 100%;
+}
 
 #bio {
-  grid-area: bio; }
+  grid-area: bio;
+}
 
 .texto {
-  margin: 2%; }
-  .texto p {
-    text-indent: 15px;
-    text-align: justify; }
+  margin: 2%;
+}
+
+.texto p {
+  text-indent: 15px;
+  text-align: justify;
+}
 
 #news {
   grid-area: news;
   margin: 1rem 1rem 1rem 1rem;
   border-left: solid #efdfd0;
-  border-right: solid #efdfd0; }
-  #news p {
-    margin-bottom: 2rem; }
+  border-right: solid #efdfd0;
+}
+
+#news p {
+  margin-bottom: 2rem;
+}
 
 #twitter {
-  grid-area: twitter; }
+  grid-area: twitter;
+}
 
 .twitter-timeline {
-  height: fit-content; }
+  height: fit-content;
+}
 
 footer {
-  grid-area: footer; }
+  grid-area: footer;
+}
 
 /* PAGINA CONTACTO */
-.submit {
-  height: 5vh;
-  width: 100%;
-  background-color: #030201;
+.form-check-input:checked {
   color: #efdfd0;
   border-color: #efdfd0;
-  text-transform: uppercase; }
+  background-color: #030201;
+}
 
 /* PAGINA DISCOGRAFIA */
-#discografia img {
-  object-fit: contain; }
-
 /* PAGINA GALERIA - Aplicacion de GRID*/
 .galeria {
   margin-left: 20px;
-  margin-right: 20px; }
-  .galeria li {
-    list-style: none; }
-  .galeria img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; }
+  margin-right: 20px;
+}
+
+.galeria li {
+  list-style: none;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 /* Vista TABLET */
 @media screen and (min-width: 768px) {
+
   /* INDEX */
   .carousel .carousel-item {
-    height: 445px; }
-    .carousel .carousel-item img {
-      position: absolute;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      width: 768px; }
+    height: 445px;
+  }
+
+  .carousel .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 768px;
+  }
+
   #grid__home {
     display: grid;
-    grid-template-areas: "youtube youtube youtube" "bio bio bio" "twitter news news" "footer footer footer";
+    grid-template-areas: "youtube youtube youtube"
+      "bio bio bio"
+      "twitter news news"
+      "footer footer footer";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 12vh; }
+    grid-template-rows: 1fr 1fr 1fr 12vh;
+  }
+
   /* GALERIA */
   .galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
-    grid-row-gap: 20px; } }
+    grid-row-gap: 20px;
+  }
+}
 
 /* Vista DESKTOP */
 @media screen and (min-width: 992px) {
+
   /* INDEX */
   .carousel .carousel-item {
-    height: 575px; }
-    .carousel .carousel-item img {
-      position: absolute;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      width: 992px; }
+    height: 575px;
+  }
+
+  .carousel .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 992px;
+  }
+
   #grid__home {
     display: grid;
-    grid-template-areas: "youtube youtube bio" "twitter news bio" "footer footer footer";
+    grid-template-areas: "youtube youtube bio"
+      "twitter news bio"
+      "footer footer footer";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 12vh; }
+    grid-template-rows: 1fr 1fr 12vh;
+  }
+
   /* GALERIA */
   .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
-    grid-row-gap: 20px; } }
+    grid-row-gap: 20px;
+  }
+}
