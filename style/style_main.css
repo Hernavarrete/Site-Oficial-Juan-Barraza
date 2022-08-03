@@ -3,7 +3,6 @@
   padding: 0px;
 }
 
-/* TODO EL SITIO */
 body {
   background-color: #030201;
   color: #efdfd0;
@@ -16,20 +15,146 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.titulo {
+h1 {
+  font-size: 34px;
+  color: #efdfd0;
+  font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
-  font-size: 5vw;
 }
 
-.subtitulo {
+h2 {
+  font-size: 21px;
+  color: #efdfd0;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 2.5rem;
   text-align: center;
+}
+
+h3 {
+  font-size: 21px;
+  color: #efdfd0;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h4 {
+  font-size: 13px;
+  color: #968f88;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h5 {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 13px;
+}
+
+.form-check-input:checked {
+  color: #efdfd0;
+  border-color: #efdfd0;
+  background-color: #030201;
+}
+
+.card p {
+  font-size: 21px !important;
+}
+
+.galeria {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.galeria li {
+  list-style: none;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel-inner a {
+  text-decoration: none;
+  color: #efdfd0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.carousel .carousel-item {
+  height: 334px;
+}
+
+.carousel .carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 576px;
+}
+
+.youtube {
+  grid-area: youtube;
+}
+
+.youtube iframe {
+  width: 100%;
+}
+
+#bio {
+  grid-area: bio;
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: justify;
+}
+
+#bio ul {
+  list-style: none;
+  font-size: 13px;
+  text-indent: 15px;
+  text-align: justify;
+}
+
+#news {
+  grid-area: news;
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: justify;
+  border-left: solid #efdfd0;
+  border-right: solid #efdfd0;
+}
+
+#news p {
+  margin-bottom: 2rem;
+}
+
+#twitter {
+  grid-area: twitter;
+}
+
+#twitter .twitter-timeline {
+  height: fit-content;
+  width: fit-content;
+}
+
+.navbar-nav {
+  transform: translate(20%);
 }
 
 .nav__menu li {
+  background-color: #030201;
   color: #efdfd0;
   padding: 1vw;
   display: inline-bloc k;
@@ -62,127 +187,83 @@ body::-webkit-scrollbar {
 }
 
 /* Animacion aplicada tomada de: https://animista.net/play/basic/shadow-pop/shadow-pop-tl */
-.nav__icons li {
-  padding: 0.5vw;
-  display: inline-block;
-}
-
-.nav__icons li img {
-  height: 2vw;
-  width: 2vw;
-}
-
-.nav__icons li:hover {
-  transform: scale(1.5, 1.5);
-}
-
-.footer {
+footer {
   border-top: solid #efdfd0;
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
-.footer ul li {
+.footer ul li,
+.footer--copyright ul li,
+.footer--redes ul li {
   list-style: none;
-  text-align: center;
   margin-top: 10px;
-  text-transform: uppercase;
 }
 
-.footer ul li a {
+.footer ul li a,
+.footer--copyright ul li a,
+.footer--redes ul li a {
   text-decoration: none;
   color: #efdfd0;
 }
 
-/* PAGINA HOME */
-.carousel-inner a {
-  text-decoration: none;
-  color: #efdfd0;
+.footer--copyright ul {
+  padding: 0rem;
+}
+
+.footer--copyright ul li {
+  text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
-.carousel .carousel-item {
-  height: 334px;
+.footer--redes ul {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
-.carousel .carousel-item img {
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  width: 576px;
-}
-
-.youtube {
-  grid-area: youtube;
-}
-
-.youtube iframe {
-  width: 100%;
-}
-
-#bio {
-  grid-area: bio;
-}
-
-.texto {
-  margin: 2%;
-}
-
-.texto p {
-  text-indent: 15px;
-  text-align: justify;
-}
-
-#news {
-  grid-area: news;
-  margin: 1rem 1rem 1rem 1rem;
-  border-left: solid #efdfd0;
-  border-right: solid #efdfd0;
-}
-
-#news p {
-  margin-bottom: 2rem;
-}
-
-#twitter {
-  grid-area: twitter;
-}
-
-.twitter-timeline {
-  height: fit-content;
+.footer--redes ul li {
+  flex-direction: row;
+  margin-bottom: 1rem;
 }
 
 footer {
   grid-area: footer;
 }
 
-/* PAGINA CONTACTO */
-.form-check-input:checked {
-  color: #efdfd0;
-  border-color: #efdfd0;
-  background-color: #030201;
-}
-
-/* PAGINA DISCOGRAFIA */
-/* PAGINA GALERIA - Aplicacion de GRID*/
-.galeria {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.galeria li {
-  list-style: none;
-}
-
-.galeria img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 /* Vista TABLET */
 @media screen and (min-width: 768px) {
+
+  /* FORMAT */
+  h1 {
+    font-size: 55px;
+    color: #efdfd0;
+    font-weight: bolder;
+  }
+
+  h2 {
+    font-size: 21px;
+    color: #efdfd0;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 21px;
+    color: #efdfd0;
+    font-weight: lighter;
+  }
+
+  h4 {
+    font-size: 13px;
+    color: #968f88;
+    font-weight: normal;
+  }
+
+  h5 {
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: normal;
+  }
 
   /* INDEX */
   .carousel .carousel-item {
@@ -214,10 +295,47 @@ footer {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+
+  /* FOOTER */
+  .footer--redes ul {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
 }
 
 /* Vista DESKTOP */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
+
+  /* FORMAT */
+  h1 {
+    font-size: 83px;
+    color: #efdfd0;
+    font-weight: bolder;
+  }
+
+  h2 {
+    font-size: 55px;
+    color: #efdfd0;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 55px;
+    color: #efdfd0;
+    font-weight: lighter;
+  }
+
+  h4 {
+    font-size: 21px;
+    color: #968f88;
+    font-weight: normal;
+  }
+
+  h5 {
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: normal;
+  }
 
   /* INDEX */
   .carousel .carousel-item {
@@ -241,11 +359,29 @@ footer {
     grid-template-rows: 1fr 1fr 12vh;
   }
 
+  #bio p {
+    font-size: 21px;
+  }
+
+  #bio ul {
+    font-size: 21px;
+  }
+
+  #news p {
+    font-size: 21px;
+  }
+
   /* GALERIA */
   .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+  }
+
+  /* FOOTER */
+  .footer--redes ul {
+    padding-left: 40%;
+    padding-right: 40%;
   }
 }

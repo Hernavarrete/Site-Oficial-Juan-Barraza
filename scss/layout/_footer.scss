@@ -1,0 +1,56 @@
+footer {
+    border-top: solid $color-primary;
+    padding-top: 1rem;
+}
+
+.footer {
+    ul {
+
+        li {
+
+            list-style: none;
+            margin-top: 10px;
+
+            a {
+                text-decoration: none;
+                color: $color-primary;
+            }
+        }
+
+    }
+}
+
+.footer--copyright {
+    @extend .footer;
+
+    ul {
+        padding: 0rem; //Anula Padding de 2 rem que aplicaba automatimcanete Bootstrap.
+
+        li {
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.footer--redes {
+    @extend .footer;
+
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 20%;
+        padding-right: 20%;
+
+        li {
+            flex-direction: row;
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+
+footer {
+    grid-area: footer;
+}

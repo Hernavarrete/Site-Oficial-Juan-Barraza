@@ -1,0 +1,173 @@
+/* Vista TABLET */
+
+@media screen and (min-width: 768px) {
+
+    /* FORMAT */
+    @mixin titulos ($font-size, $color, $weight) {
+        font-size: $font-size;
+        color: $color;
+        font-weight: $weight;
+    }
+
+    h1 {
+        @include titulos($font-xl, $color-primary, bolder)
+    }
+
+    h2 {
+        @include titulos($font-md, $color-primary, bold)
+    }
+
+    h3 {
+        @include titulos($font-md, $color-primary, lighter)
+    }
+
+    h4 {
+        @include titulos($font-sm, $color-disabled, normal)
+    }
+
+    h5 {
+        @include titulos($font-sm, $color-accent, normal)
+    }
+
+
+    /* INDEX */
+
+    .carousel .carousel-item {
+        height: 445px;
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 768px;
+        }
+    }
+
+    #grid__home {
+        display: grid;
+        grid-template-areas:
+            "youtube youtube youtube"
+            "bio bio bio"
+            "twitter news news"
+            "footer footer footer"
+        ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: (1fr 1fr 1fr 12vh);
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    /* FOOTER */
+
+    .footer--redes {
+        ul {
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+
+    }
+
+
+}
+
+/* Vista DESKTOP */
+
+@media screen and (min-width: 1200px) {
+
+    /* FORMAT */
+
+    @mixin titulos ($font-size, $color, $weight) {
+        font-size: $font-size;
+        color: $color;
+        font-weight: $weight;
+    }
+
+    h1 {
+        @include titulos($font-xxl, $color-primary, bolder)
+    }
+
+    h2 {
+        @include titulos($font-xl, $color-primary, bold)
+    }
+
+    h3 {
+        @include titulos($font-xl, $color-primary, lighter)
+    }
+
+    h4 {
+        @include titulos($font-md, $color-disabled, normal)
+    }
+
+    h5 {
+        @include titulos($font-sm, $color-accent, normal)
+    }
+
+    /* INDEX */
+
+    .carousel .carousel-item {
+        height: 575px;
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 992px;
+        }
+    }
+
+    #grid__home {
+        display: grid;
+        grid-template-areas:
+            "youtube youtube bio"
+            "twitter news bio"
+            "footer footer footer"
+        ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: (1fr 1fr 12vh);
+    }
+
+    #bio {
+        p {
+            font-size: $font-md;
+        }
+
+        ul {
+            font-size: $font-md;
+        }
+    }
+
+    #news {
+        p {
+            font-size: $font-md;
+        }
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    /* FOOTER */
+
+    .footer--redes {
+        ul {
+            padding-left: 40%;
+            padding-right: 40%;
+        }
+
+    }
+
+}
