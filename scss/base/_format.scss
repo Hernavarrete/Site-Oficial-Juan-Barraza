@@ -1,0 +1,51 @@
+body {
+    background-color: $background-primary;
+    color: $color-primary;
+    font-family: 'Raleway', sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin titulos ($font-size, $color, $weight) {
+    font-size: $font-size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin h ($transform, $aling) {
+    text-transform: $transform;
+    text-align: $aling;
+}
+
+h1 {
+    @include titulos($font-lg, $color-primary, bolder);
+    @include h(uppercase, center)
+}
+
+h2 {
+    @include titulos($font-md, $color-primary, bold);
+    @include h(uppercase, center)
+}
+
+h3 {
+    @include titulos($font-md, $color-primary, lighter);
+    @include h(uppercase, center)
+}
+
+h4 {
+    @include titulos($font-sm, $color-disabled, normal);
+    @include h(uppercase, center)
+}
+
+h5 {
+    @include titulos($font-sm, $color-accent, normal);
+    @include h(uppercase, center)
+}
+
+p {
+    font-size: $font-sm;
+}
