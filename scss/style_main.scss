@@ -1,9 +1,12 @@
 //Variables para todo el site
-@import "utilities/variables"; 
+@import "utilities/variables";
 
 //Base para todo el sito
 @import "base/reset";
 @import "base/format";
+
+@import "components/buttons";
+@import "components/cards";
 
 //Estilos de cada pagina del site
 @import "views/contacto";

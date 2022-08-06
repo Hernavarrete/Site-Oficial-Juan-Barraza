@@ -14,15 +14,15 @@
     }
 
     h2 {
-        @include titulos($font-md, $color-primary, bold)
+        @include titulos($font-lg, $color-primary, bold)
     }
 
     h3 {
-        @include titulos($font-md, $color-primary, lighter)
+        @include titulos($font-lg, $color-primary, lighter)
     }
 
     h4 {
-        @include titulos($font-sm, $color-disabled, normal)
+        @include titulos($font-md, $color-disabled, normal)
     }
 
     h5 {

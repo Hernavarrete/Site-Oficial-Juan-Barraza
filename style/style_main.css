@@ -59,14 +59,71 @@ p {
   font-size: 13px;
 }
 
+.button-primary,
+.button-secondary {
+  padding: 10px 30px;
+  width: fit-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #efdfd0;
+  background-color: #030201;
+  border: 2px solid #efdfd0;
+  border-radius: 10px;
+  transition-duration: 0.2s;
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  color: #030201;
+  background-color: #efdfd0;
+  box-shadow: 0px 0px 7.5px #ffffff;
+}
+
+.button-secondary {
+  color: #030201;
+  background-color: #efdfd0;
+}
+
+.button-secondary:hover {
+  color: #efdfd0;
+  background-color: #030201;
+  box-shadow: 0px 0px 7.5px #ffffff;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #030201;
+  outline: 2px solid #efdfd0;
+  border-radius: 10px;
+  width: 20rem;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+}
+
+.cards img {
+  width: 100%;
+}
+
+.cards h4 {
+  color: #ffffff;
+}
+
+.cards p {
+  font-size: 21px;
+}
+
+.cards .button {
+  align-self: center;
+}
+
 .form-check-input:checked {
   color: #efdfd0;
   border-color: #efdfd0;
   background-color: #030201;
-}
-
-.card p {
-  font-size: 21px !important;
 }
 
 .galeria {
@@ -79,16 +136,10 @@ p {
 }
 
 .galeria img {
+  margin: 10px;
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.carousel-inner a {
-  text-decoration: none;
-  color: #efdfd0;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 .carousel .carousel-item {
@@ -242,19 +293,19 @@ footer {
   }
 
   h2 {
-    font-size: 21px;
+    font-size: 34px;
     color: #efdfd0;
     font-weight: bold;
   }
 
   h3 {
-    font-size: 21px;
+    font-size: 34px;
     color: #efdfd0;
     font-weight: lighter;
   }
 
   h4 {
-    font-size: 13px;
+    font-size: 21px;
     color: #968f88;
     font-weight: normal;
   }
