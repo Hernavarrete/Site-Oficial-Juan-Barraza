@@ -171,3 +171,22 @@
     }
 
 }
+
+/* FIX NAVBAR sin colapsar */
+
+@media screen and (min-width: 992px) {
+
+    .navbar-nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav__menu li {
+        font-size: 1.9rem;
+
+        &:hover {
+            transform: scale(1.15, 1.15);
+        }
+
+    }
+}
